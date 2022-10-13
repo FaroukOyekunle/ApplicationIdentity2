@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<caption>Login</caption>
+    <hr />
+    <div class="row">
+        <div class="col-md-5">
+            <form method="POST" class="needs-validation">
+                @if (!string.IsNullOrEmpty(ViewBag.Message))
+                {
+                    <p class="alert alert-warning alert-dismissible" role="alert">@ViewBag.Message</p>
+                }
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Email/Username</label>
+                        <input class="form-control" placeholder="Enter email" name="userName" type="text" required />
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="control-label">Password</label>
+                        <input class="form-control" placeholder="Enter password" name="password" type="password" required />
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" required> Remember me
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
